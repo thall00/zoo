@@ -1,10 +1,10 @@
 class Tiger < ActiveRecord::Base
 
-	def self.hungry?
+	def hungry?
 		self.appetite > 0
 	end
 
-	def self.eat zebra
+	def eat zebra
 		self.appetite -= zebra.weight
 		zebra.destroy
 	end
