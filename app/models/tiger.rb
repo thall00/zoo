@@ -1,5 +1,5 @@
 class Tiger < ActiveRecord::Base
-
+	validates_presence_of :appetite
 	def hungry?
 		self.appetite > 0
 	end
@@ -8,4 +8,5 @@ class Tiger < ActiveRecord::Base
 		self.appetite -= zebra.weight
 		zebra.destroy
 	end
+	
 end
