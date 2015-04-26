@@ -12,8 +12,7 @@ RSpec.describe Zebra, type: :model do
 	it "is invalid without a weight" do
 		zebra = Zebra.new
 		zebra.valid?
-		expect(1).to eq 1
-		#expect(zebra.errors[:weight]).to include("needs a weight")
+		expect(zebra.errors[:weight]).to include("Needs a weight")
 	end
 	
 end
