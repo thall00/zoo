@@ -2,6 +2,11 @@ require 'rails_helper'
 
 RSpec.describe Giraffe, type: :model do
 
+
+	it "should include the :height attribute" do
+	  expect(subject.attributes).to include("height")
+	end
+
   it "is valid with a height" do
   	giraffe = Giraffe.new(height: 7)
   	expect(giraffe).to be_valid

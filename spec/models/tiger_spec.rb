@@ -2,10 +2,15 @@ require 'rails_helper'
 
 RSpec.describe Tiger, type: :model do
 
+	it "should include the :appetite attribute" do
+	  expect(subject.attributes).to include("appetite")
+	end
+
 	it "is valid with an appetite" do
 		tiger = Tiger.new(appetite: 99)
 		expect(tiger).to be_valid
 	end
+
 
 	it "has a default appetite of 100" do
 		tiger = Tiger.new
