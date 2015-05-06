@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'feeding/mayhem'
+
+  #resources :zebras
+  get '/zebras', to: 'zebra#index'
+
+
+  #get '/zebras' => redirect('/zebras/index')
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
